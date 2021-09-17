@@ -1,0 +1,12 @@
+<p (click)="toggleMessage()">toggle me</p>
+
+<button appHello>Click me</button>
+
+<div *ngIf="shouldShowMessage">
+    Hello World!
+    <ul>
+        <li *ngFor="let item of myItems">
+            {{item}}
+        </li>
+    </ul>
+</div>
