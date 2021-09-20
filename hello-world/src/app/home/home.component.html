@@ -1,6 +1,11 @@
 <p (click)="toggleMessage()">toggle me</p>
 
-<button appHello>Click me</button>
+
+<!-- [ngStyle]="{'display': cardActive ? 'visible' : 'none'}" -->
+<app-card [variant]="CardSize.Big" (closeEmitter)="handleCardClose($event)" *ngIf="cardActive">
+  <button appHello>Click me</button>
+  <span>Lorem ipsum</span>
+</app-card>
 
 <div *ngIf="shouldShowMessage">
     Hello World!

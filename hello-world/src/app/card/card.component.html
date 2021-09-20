@@ -1,0 +1,7 @@
+<div class="card" [class]="variant">
+  <div class="card-header">
+    <h1>Hello {{ user }}</h1>
+    <button mat-button (click)="handleClose()">Close</button>
+  </div>
+  <ng-content></ng-content>
+</div>

@@ -1,6 +1,5 @@
-<hr>
-<a [routerLink]="['./home']">Go to home</a>
-<hr>
-<a [routerLink]="['./settings']" [class]="defaultColor">Go to settings</a>
-<hr>
+<mat-toolbar color="primary">
+  <span [routerLink]="['./home']" class="nav-link">Go to home</span>
+  <span [routerLink]="['./settings']" class="nav-link" [class]="defaultColor">Go to settings</span>
+</mat-toolbar>
 <router-outlet></router-outlet>
