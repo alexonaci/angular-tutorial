@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit, DoCheck, OnDestroy {
   myItems = ['notebook', 'pen', 'dinozaur'];
   CardSize = CardSize;
   cardActive = true;
+  currentDate = new Date();
+  debugObject = { name: 'fiat', model: 'albea'};
 
   constructor(private userService: UserService) {
   }

@@ -11,6 +11,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { CardComponent } from './card/card.component';
 import { UserService } from './services/user-service/user.service';
+import { EmojiPipe } from './pipes/emoji.pipe';
 
 const routes: Routes = [
   {
@@ -28,7 +29,8 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     HelloDirective,
-    CardComponent
+    CardComponent,
+    EmojiPipe
   ],
   imports: [
     BrowserModule,

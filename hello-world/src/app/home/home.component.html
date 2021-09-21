@@ -5,10 +5,12 @@
 <app-card [variant]="CardSize.Big" (closeEmitter)="handleCardClose($event)" *ngIf="cardActive">
   <button appHello>Click me</button>
   <span>Lorem ipsum</span>
+  <h2>Current date is {{currentDate | date : 'dd.MM.YYYY' | emoji : 'angry'}}</h2>
+  {{debugObject | json}}
 </app-card>
 
 <div *ngIf="shouldShowMessage">
-    Hello World!
+    <h2>Hello World!</h2>
     <ul>
         <li *ngFor="let item of myItems">
             {{item}}
