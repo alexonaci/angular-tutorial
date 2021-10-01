@@ -12,6 +12,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { CardComponent } from './card/card.component';
 import { UserService } from './services/user-service/user.service';
 import { EmojiPipe } from './pipes/emoji.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsComponent } from './forms/forms.component';
 
 const routes: Routes = [
   {
@@ -30,14 +32,17 @@ const routes: Routes = [
     HomeComponent,
     HelloDirective,
     CardComponent,
-    EmojiPipe
+    EmojiPipe,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
   ],

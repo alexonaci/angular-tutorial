@@ -1,6 +1,8 @@
 <p (click)="toggleMessage()">toggle me</p>
 
 
+
+
 <!-- [ngStyle]="{'display': cardActive ? 'visible' : 'none'}" -->
 <app-card [variant]="CardSize.Big" (closeEmitter)="handleCardClose($event)" *ngIf="cardActive">
   <button appHello>Click me</button>
@@ -17,3 +19,6 @@
         </li>
     </ul>
 </div>
+
+
+

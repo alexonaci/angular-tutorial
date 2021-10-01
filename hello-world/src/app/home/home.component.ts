@@ -1,4 +1,5 @@
 import { Component, OnInit, DoCheck, OnDestroy } from '@angular/core';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { CardSize } from '../models/card.model';
 import { UserService } from '../services/user-service/user.service';
 
@@ -16,6 +17,8 @@ export class HomeComponent implements OnInit, DoCheck, OnDestroy {
   currentDate = new Date();
   debugObject = { name: 'fiat', model: 'albea'};
 
+
+
   constructor(private userService: UserService) {
   }
 
@@ -26,6 +29,9 @@ export class HomeComponent implements OnInit, DoCheck, OnDestroy {
   ngOnInit(): void {
     console.log('ngOnInit');
     this.userService.setActiveUser("admin-123");
+
+
+
   }
 
   handleCardClose(event: boolean) {

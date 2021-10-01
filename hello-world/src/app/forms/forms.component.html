@@ -1,0 +1,22 @@
+<h1>Template driven form</h1>
+<form #heroForm="ngForm" (ngSubmit)="submitForm(heroForm)">
+  <label for="name">username:</label>
+  <input name="username" id="name" [(ngModel)]="formModel.username" required minlength="4"/>
+
+  <label for="name">password:</label>
+  <input name="password" id="name" [(ngModel)]="formModel.password" required/>
+  <div *ngIf="!heroForm.valid && heroForm">Please add the correct input</div>
+  <button type="submit" [disabled]="!heroForm.form.valid">Login</button>
+</form>
+<hr>
+
+<h1>Reactive driven</h1>
+<form [formGroup]="reactiveFormGroup">
+  <label for="name">telephone:</label>
+  <input name="telephone" id="telephone" formControlName="telephone"/>
+
+  <label for="address">address:</label>
+  <input name="address" id="name" formControlName="address"/>
+  <div *ngIf="!reactiveFormGroup.valid && reactiveFormGroup">Please add the correct input</div>
+  <button type="submit"  [disabled]="!reactiveFormGroup.valid">Login</button>
+</form>
